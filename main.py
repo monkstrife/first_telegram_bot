@@ -5,7 +5,7 @@ bot = telebot.TeleBot('5345333077:AAHUh_1S0z_jGcikUlFO1lIVZTl574hVBYQ')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    mess = f'<b>Мяу, {message.from_user.first_name}.\nЯ твой новый бот.\nПоцелуй зайку, что слева)</b>'
+    mess = f'<b>Мяу, {message.from_user.first_name}.\nЯ твой новый бот.\nПоцелуй свою зайку)</b>'
     bot.send_message(message.chat.id, mess, parse_mode='html')
 
 
@@ -16,11 +16,11 @@ def get_mess(message):
 @bot.message_handler(commands=['1', '2', '3'])
 def you_must_do_it(message):
     if(message.text == '/1'):
-        bot.send_message(message.chat.id, '<b>Поставь чайник, пж</b>', parse_mode='html')
+        bot.send_message(message.chat.id, '<b>Поставь чайник, пожалуйста</b>', parse_mode='html')
     elif(message.text == '/2'):
-        bot.send_message(message.chat.id, '<b>Сходишь со мной в подземелье?</b>', parse_mode='html')
+        bot.send_message(message.chat.id, '<b>Сегодня тебе точно не нужно на работу. Хи-хи-хи</b>', parse_mode='html')
     elif(message.text == '/3'):
-        bot.send_message(message.chat.id, '<b><u>Сегодня вечером у нас должен быть...!</u></b>', parse_mode='html')
+        bot.send_message(message.chat.id, '<b><u>Сегодня вечером у нас должен быть праздник спорта!\nДа, это очень важно.</u></b>', parse_mode='html')
 
 
 @bot.message_handler()
